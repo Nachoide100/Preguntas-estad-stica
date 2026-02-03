@@ -1,6 +1,6 @@
-# 📊 Wiki de Estadística Aplicada
+# 📊 Estadística
 
-Repositorio de conceptos fundamentales y avanzados de estadística para el análisis de datos.
+Repositorio de conceptos fundamentales y avanzados de estadística para el análisis de datos. He intentado responde lo mejor posible a las preguntas, según entiendo yo los conceptos y sus aplicaciones. Como siempre, si alguien no está de acuerdo en alguna respuesta, comunicadlo!
 
 ### 🗺️ Navegación Rápida
 
@@ -89,6 +89,9 @@ Repositorio de conceptos fundamentales y avanzados de estadística para el anál
   **¿Cuándo merece la pena usarlo?** Se utiliza cuando el tamaño de la muestra es grande (> 30 para poder aplicar el Teorema del Límite Central) o cuando conocemos la varianza o desviación estándar de toda la población. En cambio, usar el t-test será útil cuando el grupo de datos es pequeño o cuando tenemos que estimar la varianza de la población a partir de una muestra.
   
   Como consecuencia de esto, la distribución utilizada en el t-test tiene las “colas más gruesas” (student’s t-distribution) puesto que al no conocer la varianza de la población admitimos una mayor probabilidad de observar valores extremos por puro azar.
+  ![Distribuciones](https://github.com/Nachoide100/Preguntas-estad-stica/blob/e1939096bbe27b6ead10f155c22b4d06a21108ee/visualizations/Captura%20de%20pantalla%202026-02-03%20192122.png)
+
+  La distribución roja sería la t - student. Conforme la n aumentase, esta ser iría pareciendo a la distribución normal. 
 </details>
 
 ### 📖 Imagina que tiras una moneda 10 veces y solo observas caras, ¿cuál sería tu hipótesis nula y el p-value para comprobar si la moneda está trucada o no?
