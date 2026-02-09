@@ -184,6 +184,36 @@ Cuando existe multicolinealidad, el modelo se vuelve matemáticamente inestable,
 El problema más grande es que este fenómeno impide saber qué variable es la verdadera responsable del resultado, ya que las variables correlacionadas tienden a “cancelarse” entre sí en los cálculos. Además, la multicolinealidad infla el error estándar (mayor inestabilidad), lo que significa que el modelo pierde mucha precisión al tratar de estimar qué tan importante es realmente cada factor.
 </details>
 
+### 📖 ¿Por qué la exactitud (accuracy) puede ser una métrica engañosa cuando se trabaja con un conjunto de datos altamente desbalanceado (como en la detección de fraudes o enfermedades raras) y qué métricas alternativas (como precisión, recall o F1-score) proporcionarían una visión más real del rendimiento del modelo?
+<details>
+  <summary><b>Ver respuesta 🔑</b></summary>
+
+La exactitud es una mética que puede ser muy engañosa porque simplemente mide el porcentaje total de aciertos sin distinguir qué tipo de casos está acertando. En situaciones donde una categoría es mucho más frecuente que la otra, el modelo tiende a “ignorar” la clase minoritaria para centrarse en acertar la clase mayoritaria, lo que puede dar una falsa sensación de éxito.
+
+Para evaluar realmente el rendimiento, los científicos de datos miran una tabla llamada matriz de confusión, que separa los aciertos y errores por categorías. De ahí, podemos extrar métricas más inteligentes: 
+
+1. Precisión
+
+Mide la exactitud del modelo cuando hace una predicción positiva. De todas las veces que el modelo detectó un positivo, ¿qué porcentaje fue cierto?
+
+![precision](https://github.com/Nachoide100/Preguntas-estadistica/blob/2c5f05eafbbc0bdf23122704e2be8cca8f762305/visualizations/Captura%20de%20pantalla%202026-02-06%20192656.png)
+
+2. Recall (Sensibilidad)
+
+Mide la capacidad del modelo para encontrar todos los casos positivos existentes. De todos los casos reales que había, ¿cuántos fue capaz de capturar el modelo?
+
+![recall](https://github.com/Nachoide100/Preguntas-estadistica/blob/2c5f05eafbbc0bdf23122704e2be8cca8f762305/visualizations/Captura%20de%20pantalla%202026-02-06%20192754.png)
+
+3. F1 - Score
+
+Es la media armónica enter la precisión y el recall. Se utiliza para obtener un solo número que equilibre ambas métricas, siendo especialmente útil cuando tienes un conjunto de datos desbalanceado y quieres asegurarte de que tu modelo sea bueno tanto detectando positivos como evitando falsos positivos.
+
+![f1_score](https://github.com/Nachoide100/Preguntas-estadistica/blob/2c5f05eafbbc0bdf23122704e2be8cca8f762305/visualizations/Captura%20de%20pantalla%202026-02-06%20192941.png)
+
+Vemos que existe una estrecha relación entre Precisión y Sensibilidad. El buscar aumentar una o la otra dependerá del contexto en el que nos encontremos. 
+
+</details>
+
 ---
 
 ## 🟡 Nivel: Intermedio
